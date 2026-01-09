@@ -1,0 +1,65 @@
+{
+  "realm": "campus-events",
+  "enabled": true,
+  "registrationAllowed": true,
+  "loginWithEmailAllowed": true,
+  "resetPasswordAllowed": true,
+  "editUsernameAllowed": true,
+  "sslRequired": "none",
+  "internationalizationEnabled": true,
+  "supportedLocales": ["en", "mk"],
+  "defaultLocale": "en",
+
+  "roles": {
+    "realm": [
+      { "name": "STUDENT", "description": "Student user" },
+      { "name": "ORGANIZER", "description": "Event organizer" },
+      { "name": "ADMIN", "description": "Administrator" }
+    ]
+  },
+
+  "defaultRoles": [
+    "offline_access",
+    "uma_authorization",
+    "STUDENT"
+  ],
+
+  "clients": [
+    {
+      "clientId": "events-web",
+      "name": "Student Events SPA (Vite/React)",
+      "rootUrl": "",
+      "surrogateAuthRequired": false,
+      "enabled": true,
+      "alwaysDisplayInConsole": true,
+      "clientAuthenticatorType": "client-secret",
+      "redirectUris": [
+        "http://localhost:5173/*",
+        "http://localhost:5174/*",
+        "http://localhost:4173/*",
+        "http://localhost:3000/*"
+      ],
+      "webOrigins": [
+        "http://localhost:5173",
+        "http://localhost:5174",
+        "http://localhost:4173",
+        "http://localhost:3000"
+      ],
+      "publicClient": true,
+      "protocol": "openid-connect",
+      "standardFlowEnabled": true,
+      "implicitFlowEnabled": false,
+      "directAccessGrantsEnabled": false,
+      "serviceAccountsEnabled": false,
+      "authorizationServicesEnabled": false,
+      "attributes": {
+        "post.logout.redirect.uris": "+"
+      }
+    }
+  ],
+
+  "identityProviders": [],
+  "users": [],
+  "authenticationFlows": [],
+  "groups": []
+}
