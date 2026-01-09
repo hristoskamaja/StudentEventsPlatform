@@ -1,10 +1,9 @@
 # Student Events Platform
 
 ## Project Description
-Student Events Platform is a full-stack web application for browsing and managing student events such as workshops, lectures, meetups, and conferences.
+Student Events Platform is a full-stack web application that enables browsing, creation, and registration for student events such as workshops, lectures, meetups, and conferences.
 
-The project is developed for educational purposes and demonstrates frontend–backend integration, authentication, and scalable system design.
-
+The application is developed as part of the courses **Electronic and Mobile Commerce** and **Web Design** and serves as a practical implementation of a complete web application, combining frontend and backend functionalities.
 ---
 
 ##  Technologies Used
