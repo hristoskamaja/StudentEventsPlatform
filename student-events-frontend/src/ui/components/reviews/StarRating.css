@@ -1,0 +1,27 @@
+.star-rating {
+    display: inline-flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.star-rating.disabled {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.star {
+    border: none;
+    background: transparent;
+    padding: 0;
+    font-size: 26px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.star.off {
+    color: #d1d5db;
+}
+
+.star.on {
+    color: #facc15;
+}

@@ -1,0 +1,194 @@
+/* 2 cards per row (desktop), 1 on smaller screens */
+.myreg-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+@media (max-width: 900px) {
+    .myreg-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Ticket card */
+.reg-ticket {
+    display: flex;
+    background: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    min-height: 170px;
+}
+
+.reg-image {
+    width: 240px;
+    flex-shrink: 0;
+}
+
+.reg-image img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+}
+
+
+/* Content */
+.reg-content {
+    flex: 1;
+    padding: 16px 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.reg-status {
+    font-size: 12px;
+    font-weight: 700;
+    padding: 6px 10px;
+    border-radius: 999px;
+    border: 1px solid #ddd;
+    background: #fafafa;
+    white-space: nowrap;
+}
+
+/* Optional status coloring (safe even if statuses differ) */
+.reg-status.approved { border-color: #bfe5c8; background: #eefaf1; }
+.reg-status.rejected { border-color: #f2b8b8; background: #fdeeee; }
+.reg-status.pending  { border-color: #f0d6a8; background: #fff7ea; }
+
+.reg-title {
+    font-size: 20px;
+    font-weight: 650;
+    line-height: 1.15;
+    margin: 0 0 8px;
+    color: #111;
+}
+
+.reg-location {
+    font-size: 14px;
+    font-weight: 600;
+    color: #444;
+    margin: 0 0 4px;
+}
+
+.reg-time {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 8px;
+}
+
+.reg-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 10px;
+}
+
+
+/* Footer & button */
+.reg-footer {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.reg-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    padding: 0 14px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    background: #e26d2d;
+    color: #fff;
+    border: 1px solid #e26d2d;
+    transition: transform 120ms ease, opacity 120ms ease;
+}
+
+.reg-btn:hover {
+    transform: translateY(-1px);
+    opacity: 0.95;
+}
+
+/* Review section */
+.reg-review {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #eee;
+}
+
+.reg-review-title {
+    margin: 0 0 6px;
+    font-size: 14px;
+}
+
+.reg-review-existing {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* Date strip (right) */
+.reg-date {
+    width: 90px;
+    flex-shrink: 0;
+    background: #fafafa;
+    border-left: 2px dashed #f0a46c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.reg-date .month {
+    font-size: 13px;
+    color: #888;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+}
+
+.reg-date .day {
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1;
+    color: #111;
+}
+
+.reg-date .year {
+    font-size: 12px;
+    color: #aaa;
+    margin-top: 2px;
+}
+
+/* Responsive: stack */
+@media (max-width: 768px) {
+    .reg-ticket {
+        flex-direction: column;
+    }
+
+    .reg-thumb {
+        width: 100%;
+        height: 120px;
+        font-size: 40px;
+    }
+
+    .reg-date {
+        width: 100%;
+        border-left: none;
+        border-top: 2px dashed #f0a46c;
+        flex-direction: row;
+        gap: 10px;
+        padding: 12px 0;
+    }
+
+    .reg-date .day {
+        font-size: 24px;
+    }
+}
